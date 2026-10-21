@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Умная теплица — панель управления</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-icon">🌱</span><div><strong>Умная теплица</strong><small>IoT · Мониторинг</small></div></div>
+    <nav id="navigation">
+      <button class="nav-link active" data-page="dashboard">▦ <span>Панель</span></button>
+      <button class="nav-link" data-page="zones">▤ <span>Зоны</span></button>
+      <button class="nav-link" data-page="sensors">⌁ <span>Датчики</span></button>
+      <button class="nav-link" data-page="control">⏻ <span>Управление</span></button>
+      <button class="nav-link" data-page="alerts">⚠ <span>Оповещения</span><b id="alertCount" class="nav-count">0</b></button>
+      <button class="nav-link" data-page="analytics">▥ <span>Аналитика</span></button>
+      <button class="nav-link" data-page="events">☷ <span>Журнал событий</span></button>
+      <button class="nav-link" data-page="settings">⚙ <span>Настройки</span></button>
+    </nav>
+    <div class="sidebar-bottom"><span class="live-dot"></span> Симулятор активен <small id="lastUpdate">Обновление: —</small></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><p class="eyebrow">СИСТЕМА МОНИТОРИНГА</p><h1 id="pageTitle">Панель управления</h1></div>
+      <div class="top-actions"><span class="mode-pill" id="globalMode">АВТОРЕЖИМ</span><button class="button light" id="themeButton">Светлая тема</button></div>
+    </header>
+    <div id="pageContent"></div>
+    <footer>Учебный программный симулятор IoT · Данные имитируются и не поступают с реальных датчиков.</footer>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
